@@ -14,6 +14,7 @@ chain from - из какой сети сообщение - ТОЛЬКО ИЗ BSC
 
 with open("keys.txt", "r") as f:
     keys = [row.strip() for row in f]
+    random.shuffle(keys)
 
 with open("proxyy.txt", "r") as f:
     proxies = [row.strip() for row in f]
