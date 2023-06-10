@@ -1,4 +1,4 @@
-<h1 align="center">ZkMessegeSender</h1>
+<h1 align="center">ZkMessageSender</h1>
 
 <h2>О боте</h2>
 Отправляет сообщения на https://zkbridge.com/zkmessenger </br>
