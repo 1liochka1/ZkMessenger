@@ -224,7 +224,7 @@ class ZkMessage(Help):
                 if self.chain != 'bsc':
                     tx['gasPrice'] = self.w3.eth.gas_price
                 else:
-                    tx['gasPrice'] = int(1.2 * 10 ** 9)
+                    tx['gasPrice'] = int(1.5 * 10 ** 9)
                 logger.info(f'{self.address}:{self.chain} - начинаю отправку сообщения в {self.to}...')
                 sign = self.account.sign_transaction(tx)
                 hash = self.w3.eth.send_raw_transaction(sign.rawTransaction)
