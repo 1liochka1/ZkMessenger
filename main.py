@@ -236,8 +236,9 @@ class ZkMessage(Help):
                     msg = self.msg(session,contract_msg,message,from_chain_id,to_chain_id,self.w3.to_hex(hash))
                     if msg:
                         logger.success(f'f{self.address} - success')
+                        self.sleep_indicator(random.randint(self.delay[0],self.delay[1]))
                         return self.address, 'success'
-                    self.sleep_indicator(random.randint(self.delay[0],self.delay[1]))
+
             except Exception as e:
                 error = str(e)
                 if 'INTERNAL_ERROR: insufficient funds' in error or 'insufficient funds for gas * price + value' in error:
